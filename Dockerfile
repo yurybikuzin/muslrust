@@ -135,3 +135,10 @@ ENV PATH=$PREFIX/bin:$PATH \
 
 # Allow ditching the -w /volume flag to docker run
 WORKDIR /volume
+
+# ==============================================================================
+# =============================== dumb-init  ===================================
+# https://github.com/Yelp/dumb-init
+#
+RUN curl -L -O https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64.deb
+RUN dpkg -i dumb-init_*.deb
